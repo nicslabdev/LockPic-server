@@ -7,6 +7,11 @@ The server acts as a key repository for the application, which will query it whe
 
 It has been developed to run on Google App Engine; however, its adaptation to any other platform would be straightforward; just changing the authentication procedure, and the handling of the database.
 
+
+
+Server API
+==========
+
 The server's interface with the application is through HTTP messages (over HTTPS), backed by a JSON API.
 
 The server's response to any query will always be a JSON array, where the first element will contain generic information regarding the request, and if necessary, other elements will contain further data.
