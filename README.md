@@ -23,3 +23,9 @@ The server will reply with a JSON array, with the usual header. In the second el
 4. A GET message with query string action=pictureDetails&requestedId=\<id\> will request a list of all permissions on a picture. These will be returned in a JSON array, with the first element containing the usual metadata, plus the image identifier (field pictureId) and its dimensions (width and height). Each of the following elements contains information on a permission line in the database; that is: the coordinates of the region (horizStart, horizEnd, yStart, yEnd), to whom it applies (username), and the identifier of the line in the database (id).
 
 5. A POST message with query string action=update will notify the server to update some permissions. This requires the client to send a JSON array, where the first element will contain the usual metadata for queries (only protocolVersion, currently), plus the pictureId. Each of the following elements will contain a field named action, which will have the value "add" or "delete". If it is "delete", it must contain another field id for the identificator of the permission line. If it is "add", the information on the permission (horizStart, horizEnd, vertStart, vertEnd, and username, as described above) must be provided.
+
+
+
+This project is protected by GNU General Public License v3.0.
+
+Contact me at carlosparespulido (at) gmail (dot) com.
