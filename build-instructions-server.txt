@@ -1,0 +1,27 @@
+This document describes how to compile the code for the companion
+server for the Android application LockPic, available at https://github.
+com/nicslabdev/LockPic, designed to be hosted by Google App Engine. We
+assume Eclipse is installed, and also the Google App Engine SDK, available
+at https://developers.google.com/appengine/downloads.
+This server is currently hosted and running at
+https://scrambler-keyserver.appspot.com/keyserver.
+
+We start by noting that the Android application contacts only with a
+server in an established location. Compiling this code will generate a local
+instance of the server, with a blank database, which will not interact with
+the device.
+
+To compile the project, it is necessary to indicate that we want to use
+the Google App Engine functionality.
+
+The project must be imported into Eclipse in the generic mode: File > Import, 
+and choosing, under General, Existing Projects into Workspace
+
+Once the project appears in the Project Explorer (left hand side bar),
+right click on the project, and go to Google > App Engine Settings.
+
+Select Use Google App Engine, and choose the desired version of the SDK.
+
+With this, the project can be compiled and locally hosted with the Run
+button in Eclipse. Deploying it to Google App Engine requires an account
+with administrator permissions on the server.
