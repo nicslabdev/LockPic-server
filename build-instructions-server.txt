@@ -11,7 +11,7 @@ server in an established location. Compiling this code will generate a local
 instance of the server, with a blank database, which will not interact with
 the device.
 
-To compile the project, it is necessary to indicate that we want to use
+To compile the project from the code, it is necessary to indicate that we want to use
 the Google App Engine functionality.
 
 The project must be imported into Eclipse in the generic mode: File > Import, 
@@ -25,3 +25,17 @@ Select Use Google App Engine, and choose the desired version of the SDK.
 With this, the project can be compiled and locally hosted with the Run
 button in Eclipse. Deploying it to Google App Engine requires an account
 with administrator permissions on the server.
+
+To compile and upload a copy of the server from a WAR file, the program 
+appcfg provided with the Google App Engine SDK 
+(<GAE_SDK_path>/appengine-java-sdk-<version>/bin) can be used.
+
+A Google account is required to upload it. Prior to deploying the server,
+the application must be registered in the profile of the uploader, in his/her
+Google Developer account. An identifier must be assigned to it at this point.
+
+This identifier must also be input in the /war/WEB-INF/appengine-web.xml file,
+between the <application> tags.
+
+Once that line has been changed, it suffices to run appcfg update <war directory path>,
+authenticate with Google, and the code will be deployed.
